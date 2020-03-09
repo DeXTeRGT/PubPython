@@ -1,0 +1,3 @@
+2020-03-09 14:41:09,762 - [InfraMon] - INFO - Database file is available
+2020-03-09 14:41:09,762 - [InfraMon] - INFO - Connecting to InfraMon database
+2020-03-09 14:41:09,780 - [InfraMon] - DEBUG - Connected to database - sqlite:///database/inframon.db
