@@ -12,3 +12,17 @@
 2020-03-09 14:29:51,722 INFO Trying to connect to MQTT broker @ localhost:1883
 2020-03-09 14:29:51,727 INFO Connected to MQTT broker @ localhost:1883
 2020-03-09 14:30:06,800 INFO Wrote payload to MQTT broker - payload is: b'NTQ0OjU0NTQ6NTQ1NA=='
+2020-03-09 15:28:18,056 INFO Starting SerialToMQTT injector
+2020-03-09 15:28:18,056 INFO Reading configuration file
+2020-03-09 15:28:18,056 INFO Reading configuration keys
+2020-03-09 15:28:18,057 INFO Config keys are VALID
+2020-03-09 15:28:18,057 INFO Connector type is: SERIAL
+2020-03-09 15:28:18,057 INFO Trying to open the serial port
+2020-03-09 15:28:18,057 INFO Serial port opened succesfuly
+2020-03-09 15:28:18,057 INFO Serial<id=0x1c865c50448, open=True>(port='COM3', baudrate=9600, bytesize=8, parity='N', stopbits=1, timeout=1, xonxoff=False, rtscts=False, dsrdtr=False)
+2020-03-09 15:28:18,057 INFO Main thread started - proceding to start the worker threads
+2020-03-09 15:28:18,058 INFO Starting TX thread with ID: 8936
+2020-03-09 15:28:18,058 INFO Starting RX thread with ID: 21348
+2020-03-09 15:28:18,059 INFO Trying to connect to MQTT broker @ localhost:1883
+2020-03-09 15:28:18,074 INFO Connected to MQTT broker @ localhost:1883
+2020-03-09 15:28:26,467 INFO Wrote payload to MQTT broker - payload is: b'ZGQ6ZGQ6RGRk'

@@ -14,7 +14,7 @@ from signal import signal, SIGINT
 # coder: Gabriel Tudoran
 
 logger = logging.getLogger('SerialToMQTT')
-logfile_h = logging.FileHandler('log/SerialToMQTT.log')
+logfile_h = logging.FileHandler(os.path.abspath(os.path.dirname(sys.argv[0]))+'/log/SerialToMQTT.log')
 format_h = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 logfile_h.setFormatter(format_h)
 logger.addHandler(logfile_h)
@@ -23,9 +23,9 @@ logger.setLevel(logging.INFO)
 config = configparser.ConfigParser()
 logger.info('Starting SerialToMQTT injector')
 
-if (os.path.exists('config/SerialToMQTT.ini')):
+if (os.path.exists(os.path.abspath(os.path.dirname(sys.argv[0]))+'/config/SerialToMQTT.ini')):
     logger.info('Reading configuration file')
-    config.read('config/SerialToMQTT.ini')
+    config.read(os.path.abspath(os.path.dirname(sys.argv[0]))+'/config/SerialToMQTT.ini')
 else:
     logger.error('Error reading configuration file. Please make sure that the file exists')
     logger.error('Application will exit')
