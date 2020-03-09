@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>754</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>85</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>85</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>85</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>85</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>DWS Configurator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../uiresource.qrc">
+    <normaloff>:/icons/icons8-download-from-the-cloud-80.png</normaloff>:/icons/icons8-download-from-the-cloud-80.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item row="3" column="0" colspan="3">
+     <widget class="QTextEdit" name="WLOG">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>1</number>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="MIDICC"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>OUTPUT NUMBER</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="OUTPUTNO"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="WOUTSET">
+      <property name="text">
+       <string>WRITE OUTPUT SETTINGS</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../uiresource.qrc">
+        <normaloff>:/icons/icons8-settings-50.png</normaloff>:/icons/icons8-settings-50.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>MIDI CHANNEL</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="MIDICHNL"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="WMIDICNL">
+      <property name="text">
+       <string>WRITE MIDI CHANNEL</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../uiresource.qrc">
+        <normaloff>:/icons/icons8-settings-50.png</normaloff>:/icons/icons8-settings-50.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>MIDI CC</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>754</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_FIle">
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Save"/>
+    <addaction name="action_Write_board_config"/>
+    <addaction name="separator"/>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Utility">
+    <property name="title">
+     <string>&amp;Utility</string>
+    </property>
+    <addaction name="actionFir_mware_Upload"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_About"/>
+   </widget>
+   <addaction name="menu_FIle"/>
+   <addaction name="menu_Utility"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="../uiresource.qrc">
+     <normaloff>:/icons/icons8-save-80.png</normaloff>:/icons/icons8-save-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save board config</string>
+   </property>
+  </action>
+  <action name="action_Write_board_config">
+   <property name="icon">
+    <iconset resource="../uiresource.qrc">
+     <normaloff>:/icons/icons8-restart-80.png</normaloff>:/icons/icons8-restart-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Write board config</string>
+   </property>
+  </action>
+  <action name="actionE_xit">
+   <property name="icon">
+    <iconset resource="../uiresource.qrc">
+     <normaloff>:/icons/icons8-delete-80.png</normaloff>:/icons/icons8-delete-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionFir_mware_Upload">
+   <property name="icon">
+    <iconset resource="../uiresource.qrc">
+     <normaloff>:/icons/icons8-share-80.png</normaloff>:/icons/icons8-share-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fir&amp;mware Upload</string>
+   </property>
+  </action>
+  <action name="action_Connect">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Connect</string>
+   </property>
+  </action>
+  <action name="action_Disconnect">
+   <property name="text">
+    <string>&amp;Disconnect</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="../uiresource.qrc">
+     <normaloff>:/icons/icons8-search-80.png</normaloff>:/icons/icons8-search-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>MIDICHNL</tabstop>
+  <tabstop>WMIDICNL</tabstop>
+  <tabstop>MIDICC</tabstop>
+  <tabstop>OUTPUTNO</tabstop>
+  <tabstop>WOUTSET</tabstop>
+  <tabstop>WLOG</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../uiresource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

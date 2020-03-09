@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons8-search-80.png</file>
+    <file>icons8-share-80.png</file>
+    <file>icons8-opened-folder-80.png</file>
+    <file>icons8-restart-80.png</file>
+    <file>icons8-edit-80.png</file>
+    <file>icons8-delete-80.png</file>
+    <file>noun_Workflow_2010766.png</file>
+    <file>noun_Workflow_1885306.png</file>
+    <file>noun_Workflow_2834738.png</file>
+    <file>load_39552.png</file>
+    <file>icons8-save-80.png</file>
+    <file>icons8-settings-50.png</file>
+    <file>icons8-download-from-the-cloud-80.png</file>
+  </qresource>
+</RCC>
