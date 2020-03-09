@@ -7,6 +7,7 @@ import time
 import numpy as np
 import random
 import mplwidget
+import os
 
 from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtCore import Qt
@@ -18,19 +19,19 @@ from pathlib import Path
 
 from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
 
-config_file='config/config.ini'
+config_file=os.path.abspath(os.path.dirname(sys.argv[0]))+'/config/config.ini'
 config_parse = ConfigParser()
 
 if Path(config_file).is_file():
-    config_parse.read('config/config.ini')
+    config_parse.read(os.path.abspath(os.path.dirname(sys.argv[0]))+'/config/config.ini')
 else:
     sys.exit(1)
 
 logger=logging.getLogger('[InfraMon]')
 logger.setLevel(logging.DEBUG)
 
-err_log=logging.FileHandler('log/' +  config_parse.get('GENERAL','err_log'))
-app_log=logging.FileHandler('log/' +  config_parse.get('GENERAL','app_log'))
+err_log=logging.FileHandler(os.path.abspath(os.path.dirname(sys.argv[0]))+'/log/' +  config_parse.get('GENERAL','err_log'))
+app_log=logging.FileHandler(os.path.abspath(os.path.dirname(sys.argv[0]))+'/log/' +  config_parse.get('GENERAL','app_log'))
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 err_log.setLevel(logging.ERROR)
@@ -42,7 +43,7 @@ app_log.setFormatter(formatter)
 logger.addHandler(err_log)
 logger.addHandler(app_log)
 
-db_name='database/' + config_parse.get('GENERAL','db_name')
+db_name=os.path.abspath(os.path.dirname(sys.argv[0]))+'/database/' + config_parse.get('GENERAL','db_name')
 
 if Path(db_name).is_file():
     logger.info('Database file is available')
@@ -97,7 +98,7 @@ class UpdateThread(QtCore.QThread):
 class Login(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
-        uic.loadUi('ui/login.ui', self)
+        uic.loadUi(os.path.abspath(os.path.dirname(sys.argv[0]))+'/ui/login.ui', self)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.l_login.clicked.connect(self.handleLogin)
         self.l_cancel.clicked.connect(self.cancelLogin)
@@ -137,7 +138,7 @@ class Login(QtWidgets.QDialog):
 class EditUser(QtWidgets.QMainWindow):
     def __init__(self, parent):
         super(EditUser, self).__init__(parent)
-        uic.loadUi('ui/usermanagement.ui', self)
+        uic.loadUi(os.path.abspath(os.path.dirname(sys.argv[0]))+'/ui/usermanagement.ui', self)
         #self.setWindowFlags(Qt.Window | Qt.FramelessWindowHint)
         get_avialable_users='select * from users'
         get_result_users=engine.execute(get_avialable_users)
@@ -190,7 +191,7 @@ class EditUser(QtWidgets.QMainWindow):
 class AddUser(QtWidgets.QMainWindow):
     def __init__(self, parent):
         super(AddUser, self).__init__(parent)
-        uic.loadUi('ui/adduser.ui', self)
+        uic.loadUi(os.path.abspath(os.path.dirname(sys.argv[0]))+'/ui/adduser.ui', self)
       
         role=['Administrator', 'Editor', 'Viewer']
         is_active=['Inactive', 'Active']
@@ -254,7 +255,7 @@ class Window(QtWidgets.QMainWindow):
     logged_user=''
     def __init__(self, parent=None):
         super(Window, self).__init__(parent)
-        uic.loadUi('ui/main.ui', self)
+        uic.loadUi(os.path.abspath(os.path.dirname(sys.argv[0]))+'/ui/main.ui', self)
         #self.MplWidget=mplwidget
 
         if config_parse.get('ENDPOINT','get_mqtt')=='false':

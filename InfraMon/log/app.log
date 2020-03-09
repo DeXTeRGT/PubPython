@@ -1,3 +1,9 @@
 2020-03-09 14:41:09,762 - [InfraMon] - INFO - Database file is available
 2020-03-09 14:41:09,762 - [InfraMon] - INFO - Connecting to InfraMon database
 2020-03-09 14:41:09,780 - [InfraMon] - DEBUG - Connected to database - sqlite:///database/inframon.db
+2020-03-09 15:33:12,800 - [InfraMon] - INFO - Database file is available
+2020-03-09 15:33:12,801 - [InfraMon] - INFO - Connecting to InfraMon database
+2020-03-09 15:33:12,807 - [InfraMon] - DEBUG - Connected to database - sqlite:///c:\dev_prj\PubPythonGit\InfraMon/database/inframon.db
+2020-03-09 15:34:21,236 - [InfraMon] - INFO - Database file is available
+2020-03-09 15:34:21,237 - [InfraMon] - INFO - Connecting to InfraMon database
+2020-03-09 15:34:21,243 - [InfraMon] - DEBUG - Connected to database - sqlite:///c:\dev_prj\PubPythonGit\InfraMon/database/inframon.db
