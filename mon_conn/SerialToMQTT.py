@@ -9,8 +9,9 @@ import threading
 import time
 import pybase64 
 from signal import signal, SIGINT
+
 # initial commit on github @ 09 03 2020
-# connector prototype
+# connector prototype - Serial string to MQTT infrastructure
 # coder: Gabriel Tudoran
 
 logger = logging.getLogger('SerialToMQTT')
