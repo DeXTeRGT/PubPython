@@ -11,6 +11,7 @@ import pybase64
 from signal import signal, SIGINT
 # initial commit on github @ 09 03 2020
 # connector prototype
+# coder: Gabriel Tudoran
 
 logger = logging.getLogger('SerialToMQTT')
 logfile_h = logging.FileHandler('log/SerialToMQTT.log')
