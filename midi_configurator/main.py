@@ -14,7 +14,7 @@ from resources import uiresource
 from PyQt5.QtCore import QTimer
 
 config=ConfigParser()
-config.read('config.ini')
+config.read(os.path.abspath(os.path.dirname(sys.argv[0]))+'/config.ini')
 
 Tx_Queue=queue.Queue(maxsize=200)
 Rx_Queue=queue.Queue(maxsize=200)
@@ -43,7 +43,7 @@ class Ui(QtWidgets.QMainWindow):
 
     def __init__(self):
         super(Ui, self).__init__()
-        uic.loadUi('ui/main.ui', self)
+        uic.loadUi(os.path.abspath(os.path.dirname(sys.argv[0]))+'/ui/main.ui', self)
         
         for midi_idx in range(1,17):
             self.MIDICHNL.addItem(str(midi_idx))
@@ -66,7 +66,7 @@ class Ui(QtWidgets.QMainWindow):
         self.GetLog.str_signal.connect(self.WLOG.append)
         self.GetLog.start()
   
-        Log_Queue.put('<font color=green><b>[INFO]</b></font>Utility running at: ' + str(os.path.dirname(sys.argv[0])))
+        Log_Queue.put('<font color=green><b>[INFO]</b></font>Utility running at: ' + str(os.path.abspath(os.path.dirname(sys.argv[0]))))
         
         try:
             Serial_Com = serial.Serial(config.get('GENERAL', 'com_port'), 9600, timeout=1)
