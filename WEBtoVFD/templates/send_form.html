@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send a message @ Dexter's Workshop</title>
+</head>
+<body>
+ 
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+ 
+    <form action="" method="post">
+        <p>
+            <label for="message">Line 1 (max 19 chars)</label>
+            <input type="text" name="line_one" maxlength="19">
+        </p>
+        <p>
+            <label for="message">Line 2 (max 19 chars)</label>
+            <input type="text" name="line_two" maxlength="19">
+        </p>
+        <p>
+            <input type="submit" value="Send message">
+        </p>
+    </form>
+ 
+</body>
+</html>
