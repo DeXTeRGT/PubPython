@@ -1,0 +1,50 @@
+<MyGrid>:
+    temp: gauge_1
+    hum: gauge_2
+    lbl1: lbl1
+    lbl2: lbl2
+    knob1: knob1
+    knob2: knob2
+    cols: 2
+    GridLayout:
+        cols:1
+        size: root.size
+        size_hint_y: 1
+        GridLayout:
+            cols:2
+            padding: 20
+            spacing: 20
+            Knob:
+                id: knob1
+                size: 500, 500
+                value: 0
+                knobimg_source: "img/knob_metal.png"
+                markeroff_color: 0.0, 0.0, .0, 1
+                knobimg_size: 0.9
+                marker_img: "img/bline3.png"
+
+            Knob:
+                id: knob2
+                value: 0
+                size: 500, 500
+                knobimg_source: "img/knob_metal.png"
+                markeroff_color: 0.0, 0.0, .0, 1
+                knobimg_size: 0.9
+                marker_img: "img/bline3.png"
+
+            ProgressBar:
+                
+                id: gauge_1
+                width: 300
+
+            ProgressBar:
+
+                width: 300
+                id: gauge_2
+            Label:
+                font_size:'40sp'
+                id: lbl2
+
+            Label:
+                font_size:'40sp'    
+                id: lbl1
